@@ -1,0 +1,24 @@
+Publish visual studio solution to a folder using File System / Web Deployment
+Open IIS Manager
+Right click on sites and select 'Add Website'
+Enter 'Site name'
+A new ApplicationPool will be created with site name (You can leave it as is or if you think some other ApplicationPool suits the requirements then select it) 
+Provide 'Physical path'
+You can keep all other options as-is and click 'OK'
+Website will be added to the site list
+Now, click on 'Application Pools' option and select pool that we are currently using with our application
+Right click and select 'Basic Settings' and change .NET CLR version to 'No Managed Code' for an application with .NET core target version and click 'OK'
+Again 'right click' and select 'Advanced Settings' - 'Process Model' - 'Identity' - 'Custom Account' - Set 'Domain user name' and 'password'
+After that go to the WebSite which is under Sites, right click on it and browse
+Now you should be able to see the application up and running and also you should be able to access this application from other machines if they are connected to the LAN
+If in case SSL is enabled for your application then right click on the WebSite 'edit bindings' - Add
+Select Type as 'https' Keep IP address as 'All Unassigned' and port 443
+You can keep host name as 'localhost' or leave it empty
+Select SSL certificate add 'IIS Express Development Certificate' and click 'OK'
+Now you should be able to access your website at https://localhost:443
+
+/**
+For .NET core applications, .NET Core run time must be installed in your machine.
+you can download it here https://go.microsoft.com/fwlink/?LinkId=817246
+**/
+
