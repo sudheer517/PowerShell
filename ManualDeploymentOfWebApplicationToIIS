@@ -1,3 +1,8 @@
+/**
+For .NET core applications, .NET Core run time must be installed in your machine.
+you can download it here https://go.microsoft.com/fwlink/?LinkId=817246
+**/
+
 Publish visual studio solution to a folder using File System / Web Deployment
 Open IIS Manager
 Right click on sites and select 'Add Website'
@@ -16,9 +21,3 @@ Select Type as 'https' Keep IP address as 'All Unassigned' and port 443
 You can keep host name as 'localhost' or leave it empty
 Select SSL certificate add 'IIS Express Development Certificate' and click 'OK'
 Now you should be able to access your website at https://localhost:443
-
-/**
-For .NET core applications, .NET Core run time must be installed in your machine.
-you can download it here https://go.microsoft.com/fwlink/?LinkId=817246
-**/
-
