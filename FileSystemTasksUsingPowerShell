@@ -1,0 +1,21 @@
+#List contents of a directory
+ls or Get-ChildItem
+
+#List contnets of a directory along with hidden and system items
+ls -force or Get-ChildItem -Force
+
+#use recurse option to see contained items of each folder 
+Get-ChildItem -recurse
+
+#Copy a file or directory
+Copy-Item Source Destination 
+
+#Move a file or directory
+Move-Item Source Destination
+
+#Delete a File or directory
+Remove-Item Path
+
+#Rename a file or directory
+Rename-Item CurrentName NewName
+
