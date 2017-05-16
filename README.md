@@ -1,2 +1,5 @@
 # PowerShell
-Will keep all the scripts here 
+#Contains
+Manual deployment of WebApplication to IIS
+PowerShell script to deploy WebApplication to IIS
+
