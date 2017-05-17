@@ -19,3 +19,15 @@ Remove-Item Path
 #Rename a file or directory
 Rename-Item CurrentName NewName
 
+#Remove files which are older than 10 days
+ $limit = (Get-Date).AddDays(10) -> this would give date which is 10 days old
+ $path = "C:\Users\jayaramp\Desktop\PowerShell\RemoveFiles\" -> provide path from where you would like to remove files
+ Get-ChildItem -Path $path -Force -> This would show all the files and folders from the path
+ Get-ChildItem -Path $path -Force | Where-Object {!$_.PSIsContainer -and $_.CreationTime -lt $limit} -> This would show the files which are older than 10 days
+ Get-ChildItem -Path $path -Force | Where-Object {!$_.PSIsContainer -and $_.CreationTime -lt $limit} | Remove-Item -Force -> This command will remove filtered files
+ 
+ From the commands above
+ $_.PSIsContainer -> All folders will show up along with files
+ Force -> This option would show all hidden and system files
+ 
+
